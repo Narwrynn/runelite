@@ -1037,13 +1037,13 @@ public class GpuPlugin extends Plugin implements DrawCallbacks
 		Model skybox = scene.getSkybox();
 		if (skybox == null)
 		{
-			glClearColor((sky >> 16 & 0xFF) / 255f, (sky >> 8 & 0xFF) / 255f, (sky & 0xFF) / 255f, 1f);
+			glClearColor((sky >> 16 & 0xFF) / 255f, (sky >> 8 & 0xFF) / 255f, (sky & 0xFF) / 255f, 0f);
 			glClearDepth(0d);
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			return;
 		}
 
-		glClearColor(0f, 0f, 0f, 1f);
+		glClearColor(0f, 0f, 0f, 0f);
 		glClearDepth(0d);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
